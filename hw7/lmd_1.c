@@ -1,0 +1,552 @@
+#include<xc.h>           // processor SFR definitions
+#include<sys/attribs.h>  // __ISR macro
+#include "ili9341_PIC32.h"
+#include <stdio.h>
+//#include <ili9341.c>
+
+// DEVCFG0
+#pragma config DEBUG = OFF // no debugging
+#pragma config JTAGEN = OFF// no jtag
+#pragma config ICESEL = ICS_PGx1 // use PGED1 and PGEC1
+#pragma config PWP = OFF // no write protect
+#pragma config BWP = OFF // no boot write protect
+#pragma config CP = OFF // no code protect
+
+// DEVCFG1
+#pragma config FNOSC = PRIPLL // use primary oscillator with pll
+#pragma config FSOSCEN = OFF // turn off secondary oscillator
+#pragma config IESO = OFF // no switching clocks
+#pragma config POSCMOD = HS // high speed crystal mode
+#pragma config OSCIOFNC = OFF // disable secondary osc
+#pragma config FPBDIV = DIV_1 // divide sysclk freq by 1 for peripheral bus clock
+#pragma config FCKSM = CSDCMD // do not enable clock switch
+#pragma config WDTPS = PS1048576 // use slowest wdt
+#pragma config WINDIS = OFF // wdt no window mode
+#pragma config FWDTEN = OFF // wdt disabled
+#pragma config FWDTWINSZ = WINSZ_25 // wdt window at 25%
+
+// DEVCFG2 - get the sysclk clock to 48MHz from the 8MHz crystal
+#pragma config FPLLIDIV = DIV_2 // divide input clock to be in range 4-5MHz
+#pragma config FPLLMUL = MUL_24 // multiply clock after FPLLIDIV
+#pragma config FPLLODIV = DIV_2 // divide clock after FPLLMUL to get 48MHz
+#pragma config UPLLIDIV = DIV_2 // divider for the 8MHz input clock, then multiplied by 12 to get 48MHz for USB
+#pragma config UPLLEN = ON // USB clock on
+
+// DEVCFG3
+#pragma config USERID = 0 // some 16bit userid, doesn't matter what
+#pragma config PMDL1WAY = OFF // allow multiple reconfigurations
+#pragma config IOL1WAY = OFF // allow multiple reconfigurations
+#pragma config FUSBIDIO = ON // USB pins controlled by USB module
+#pragma config FVBUSONIO = ON // USB BUSON controlled by USB module
+
+char letter[100];
+int k;
+double f;
+int k=0;
+int check_1s;
+void LCD_bar(unsigned short x, unsigned short y, unsigned short L, unsigned short H, unsigned short barcolor, unsigned short framecolor);
+void LCD_get(unsigned short x, unsigned short y, char *letter, unsigned lettercolor, unsigned bgcolor);
+void i2c_master_setup(void) ;
+void i2c_master_start(void) ;
+void i2c_master_restart(void) ;
+void i2c_master_send(unsigned char byte) ;
+unsigned char i2c_master_recv(void);
+void i2c_master_ack(int val);
+void i2c_master_stop(void);
+
+#define  configRead 0b11010111 
+#define  configWrite 0b11010110
+#define  WHO_AM_I 0b00001111
+#define configAcc 0b10000010
+#define  CTRL1_XL 0b00010000
+#define CTRL2_G 0b00010001
+#define configG 0b10001000
+#define OUTX_L_XL  0b00101000
+#define OUTX_H_XL 0b00101001
+int main() {
+__builtin_disable_interrupts();
+
+    // set the CP0 CONFIG register to indicate that kseg0 is cacheable (0x3)
+    __builtin_mtc0(_CP0_CONFIG, _CP0_CONFIG_SELECT, 0xa4210583);
+
+    // 0 data RAM access wait states
+    BMXCONbits.BMXWSDRM = 0x0;
+
+    // enable multi vector interrupts
+    INTCONbits.MVEC = 0x1;
+
+    // disable JTAG to get pins back
+    DDPCONbits.JTAGEN = 0;
+
+    // do your TRIS and LAT commands here
+    TRISAbits.TRISA4 = 0; //A4 Output
+    TRISBbits.TRISB4 = 1; //B4 Input 
+    ANSELBbits.ANSB2 = 0;
+    ANSELBbits.ANSB3 = 0;
+   // TRISBbits.TRISB2 = 0;
+    //TRISBbits.TRISB3 = 0;
+    __builtin_enable_interrupts();
+    i2c_master_setup();
+    SPI1_init(); // initial SPI
+    LCD_init(); //Initial LCD
+    LCD_clearScreen(ILI9341_DARKCYAN); //LCD background to black
+    char who;
+    char a=1;
+    int k;
+    _CP0_SET_COUNT(0);
+    k=0;
+    while(1) {
+     ////////////////////////////////////////////////////////////////////////////   
+      
+  
+    ////////////////////////////////////////////////////////////////////////////
+       /*
+        i2c_master_start(); 
+       i2c_master_send(configWrite);
+       i2c_master_send(WHO_AM_I);//who am I
+       i2c_master_stop();
+       i2c_master_restart();
+       i2c_master_send(configRead);
+       who=i2c_master_recv();
+       i2c_master_ack(1);
+       i2c_master_stop();
+       */
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(CTRL1_XL);
+       i2c_master_send(configAcc);
+       i2c_master_stop;
+       
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(CTRL2_G);
+       i2c_master_send(configG);
+       i2c_master_stop;
+       
+   
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(CTRL1_XL);
+       i2c_master_stop();
+       i2c_master_restart();
+       i2c_master_send(configRead);
+       who=i2c_master_recv();
+       i2c_master_ack(1);
+       i2c_master_stop();
+     
+       
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(0b00101000);
+       i2c_master_stop();
+       i2c_master_restart();
+       i2c_master_send(configRead);
+       a=i2c_master_recv();
+       i2c_master_ack(1);
+       i2c_master_stop();
+       
+       char b;
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(0b00101001);
+       i2c_master_stop();
+       i2c_master_restart();
+       i2c_master_send(configRead);
+       b=i2c_master_recv();
+       i2c_master_ack(1);
+       i2c_master_stop();
+       short at;
+       float ac;
+       at=b*256+a;
+        ac=4*9.8*at/65536-2*9.8;
+       if  (_CP0_GET_COUNT()>2400000)
+        {
+        
+        f= 5*24000000.0/_CP0_GET_COUNT();
+        sprintf(letter,"who %d",who);   
+        LCD_get(28, 120,letter,ILI9341_WHITE,ILI9341_BLACK);
+        
+          
+       sprintf(letter,"a %d",at);   
+       LCD_get(40, 160,letter,ILI9341_WHITE,ILI9341_BLACK);
+      
+        
+        sprintf(letter,"t %d",k);   
+        LCD_get(28, 200,letter,ILI9341_WHITE,ILI9341_BLACK);
+        k++;
+        
+           _CP0_SET_COUNT(0);
+        }
+        
+        /*            LATAbits.LATA4==0; // initial value assigned zero
+               if (PORTBbits.RB4==0)
+               {
+                   LATAbits.LATA4=0;   // While button pressed, led disabled 
+               }
+               if (PORTBbits.RB4==1)
+               if(_CP0_GET_COUNT()>=1200000)
+               {
+                    LATAbits.LATA4 = !LATAbits.LATA4; // Every 0.5ms Filp LED voltage 
+                    _CP0_SET_COUNT(0);   // Clear Clk Timer
+               }
+        */             
+
+    } 
+}
+
+
+
+
+void LCD_init() {
+    int time = 0;
+    
+    CS = 0; // CS
+   
+    LCD_command(ILI9341_SWRESET);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 7200000) {} // 300ms
+
+    LCD_command(0xEF);
+  	LCD_data(0x03);
+	LCD_data(0x80);
+	LCD_data(0x02);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xCF);
+  	LCD_data(0x00);
+	LCD_data(0xC1);
+	LCD_data(0x30);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xED);
+  	LCD_data(0x64);
+	LCD_data(0x03);
+	LCD_data(0x12);
+    LCD_data(0x81);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xE8);
+  	LCD_data(0x85);
+	LCD_data(0x00);
+	LCD_data(0x78);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xCB);
+  	LCD_data(0x39);
+	LCD_data(0x2C);
+	LCD_data(0x00);
+    LCD_data(0x34);
+    LCD_data(0x02);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xF7);
+  	LCD_data(0x20);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xEA);
+  	LCD_data(0x00);
+	LCD_data(0x00);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_PWCTR1);
+  	LCD_data(0x23);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_PWCTR2);
+  	LCD_data(0x10);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_VMCTR1 );
+  	LCD_data(0x3e);
+    LCD_data(0x28);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_VMCTR2);
+  	LCD_data(0x86);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_MADCTL);
+  	LCD_data(0x48);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+/*    
+    LCD_command(ILI9341_VSCRSADD);
+  	LCD_data(0x00);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+ */   
+    LCD_command(ILI9341_PIXFMT);
+  	LCD_data(0x55);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_FRMCTR1);
+  	LCD_data(0x00);
+    LCD_data(0x18);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command( ILI9341_DFUNCTR);
+  	LCD_data(0x08);
+    LCD_data(0x82);
+    LCD_data(0x27);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xF2);
+  	LCD_data(0); // 1
+    LCD_data(0x00);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_GAMMASET);
+  	LCD_data(0x01);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_GMCTRP1);
+  	LCD_data(0x0F);
+    LCD_data(0x31);
+    LCD_data(0x2B);
+    LCD_data(0x0C);
+    LCD_data(0x0E);
+    LCD_data(0x08);
+    LCD_data(0x4E);
+    LCD_data(0xF1);
+    LCD_data(0x37);
+    LCD_data(0x07);
+    LCD_data(0x10);
+    LCD_data(0x03);
+    LCD_data(0x0E);
+    LCD_data(0x09);
+    LCD_data(0x00);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_GMCTRN1);
+  	LCD_data(0x00);
+    LCD_data(0x0E);
+    LCD_data(0x14);
+    LCD_data(0x03);
+    LCD_data(0x11);
+    LCD_data(0x07);
+    LCD_data(0x31);
+    LCD_data(0xC1);
+    LCD_data(0x48);
+    LCD_data(0x08);
+    LCD_data(0x0F);
+    LCD_data(0x0C);
+    LCD_data(0x31);
+    LCD_data(0x36);
+    LCD_data(0x0F);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(0xB1);
+  	LCD_data(0x00);
+    LCD_data(0x10);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_SLPOUT);
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    LCD_command(ILI9341_DISPON);
+    
+    CS = 1; // CS
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    
+    CS = 0; // CS
+    
+    LCD_command(ILI9341_MADCTL);
+    LCD_data(MADCTL_MX | MADCTL_BGR); // rotation
+    time = _CP0_GET_COUNT();
+    while (_CP0_GET_COUNT() < time + 3600000) {} // 150ms
+    
+    CS = 1; // CS
+}
+
+void SPI1_init() {
+  SDI1Rbits.SDI1R = 0b0100; // B8 is SDI1
+  RPA1Rbits.RPA1R = 0b0011; // A1 is SDO1
+  TRISBbits.TRISB7 = 0; // CS is B7
+  CS = 1; // CS starts high
+
+  // DC pin
+  TRISBbits.TRISB15 = 0;
+  DC = 1;
+  
+  SPI1CON = 0; // turn off the spi module and reset it
+  SPI1BUF; // clear the rx buffer by reading from it
+  SPI1BRG = 0; // baud rate to 12 MHz [SPI1BRG = (48000000/(2*desired))-1]
+  SPI1STATbits.SPIROV = 0; // clear the overflow bit
+  SPI1CONbits.CKE = 1; // data changes when clock goes from hi to lo (since CKP is 0)
+  SPI1CONbits.MSTEN = 1; // master operation
+  SPI1CONbits.ON = 1; // turn on spi1
+}
+
+unsigned char spi_io(unsigned char o) {
+  SPI1BUF = o;
+  while(!SPI1STATbits.SPIRBF) { // wait to receive the byte
+    ;
+  }
+  return SPI1BUF;
+}
+
+void LCD_command(unsigned char com) {
+    DC = 0; // DC
+    spi_io(com);
+    DC = 1; // DC
+}
+
+void LCD_data(unsigned char dat) {
+    spi_io(dat);
+}
+
+void LCD_data16(unsigned short dat) {
+    spi_io(dat>>8);
+    spi_io(dat);
+}
+
+void LCD_setAddr(unsigned short x, unsigned short y, unsigned short w, unsigned short h) {
+    LCD_command(ILI9341_CASET); // Column
+    LCD_data16(x);
+	LCD_data16(x+w-1);
+
+	LCD_command(ILI9341_PASET); // Page
+	LCD_data16(y);
+	LCD_data16(y+h-1);
+
+	LCD_command(ILI9341_RAMWR); // Into RAM
+}
+
+void LCD_drawPixel(unsigned short x, unsigned short y, unsigned short color) {
+  // check boundary
+    
+    CS = 0; // CS
+    
+    LCD_setAddr(x,y,1,1);
+    LCD_data16(color);
+    
+    CS = 1; // CS
+}
+
+void LCD_clearScreen(unsigned short color) {
+    int i;
+    CS = 0; // CS
+    LCD_setAddr(0,0,ILI9341_TFTWIDTH,ILI9341_TFTHEIGHT);
+	for (i = 0;i < ILI9341_TFTWIDTH*ILI9341_TFTHEIGHT; i++){
+		LCD_data16(color);
+	}
+    CS = 1; // CS
+}
+
+void LCD_letter(unsigned short x, unsigned short y, char letter, unsigned lettercolor, unsigned bgcolor){
+    char rowloc = letter - 0x20;
+    int row;
+    int column;
+    for (column=0; column <= 4;)
+    {
+        char pix = ASCII [rowloc][column];
+        for (row= 0;row <= 7;){
+            
+            if (x+column <= ILI9341_TFTWIDTH && y+row<= ILI9341_TFTHEIGHT){
+                if (pix >> row & 1 == 1){
+                    LCD_drawPixel (x+column,y+row,lettercolor);
+                }
+                    else{
+                    LCD_drawPixel (x+column,y+row,bgcolor);
+                }
+            }
+           row++;
+        }
+           column++;
+    }
+}
+
+void LCD_get(unsigned short x, unsigned short y, char *letter, unsigned lettercolor, unsigned bgcolor){ 
+    int i = 0;
+    while(letter[i] != '\0'){
+        LCD_letter(x + i * 5,y,letter[i],lettercolor,bgcolor);
+        i++;
+    }
+}
+
+void LCD_bar(unsigned short x, unsigned short y, unsigned short L, unsigned short H, unsigned short barcolor, unsigned short framecolor){
+    int i,j;
+    for(i = 0; i < L; ){
+        i++;
+        for(j = 0; j < H;){
+            j++;
+            LCD_drawPixel(x + i, y + j, barcolor);
+        }
+    }
+    if (L < 100){
+        for(i = L; i < 100;){
+            i++;
+            for(j = L; j< H;){
+                j++;
+                LCD_drawPixel(x + i,y + j,framecolor);
+            }
+        }
+    }
+}
+
+
+void i2c_master_setup(void) {
+  I2C2BRG = 37;            // I2CBRG = [1/(2*Fsck) - PGD]*Pblck - 2  50Mhz 
+                                    // look up PGD for your PIC32 PGD=104ns
+  I2C2CONbits.ON = 1;               // turn on the I2C1 module
+}
+
+// Start a transmission on the I2C bus
+void i2c_master_start(void) {
+    I2C2CONbits.SEN = 1;            // send the start bit
+    while(I2C2CONbits.SEN) { ; }    // wait for the start bit to be sent
+}
+
+void i2c_master_restart(void) {     
+    I2C2CONbits.RSEN = 1;           // send a restart 
+    while(I2C2CONbits.RSEN) { ; }   // wait for the restart to clear
+}
+
+void i2c_master_send(unsigned char byte) { // send a byte to slave
+  I2C2TRN = byte;                   // if an address, bit 0 = 0 for write, 1 for read
+  while(I2C2STATbits.TRSTAT) { ; }  // wait for the transmission to finish
+  if(I2C2STATbits.ACKSTAT) {        // if this is high, slave has not acknowledged
+    // ("I2C2 Master: failed to receive ACK\r\n");
+  }
+}
+
+unsigned char i2c_master_recv(void) { // receive a byte from the slave
+    I2C2CONbits.RCEN = 1;             // start receiving data
+    while(!I2C2STATbits.RBF) { ; }    // wait to receive the data
+    return I2C2RCV;                   // read and return the data
+}
+
+void i2c_master_ack(int val) {        // sends ACK = 0 (slave should send another byte)
+                                      // or NACK = 1 (no more bytes requested from slave)
+    I2C2CONbits.ACKDT = val;          // store ACK/NACK in ACKDT
+    I2C2CONbits.ACKEN = 1;            // send ACKDT
+    while(I2C2CONbits.ACKEN) { ; }    // wait for ACK/NACK to be sent
+}
+
+void i2c_master_stop(void) {          // send a STOP:
+  I2C2CONbits.PEN = 1;                // comm is complete and master relinquishes bus
+  while(I2C2CONbits.PEN) { ; }   
+  // wait for STOP to complete
+}
