@@ -53,6 +53,12 @@ void i2c_master_send(unsigned char byte) ;
 unsigned char i2c_master_recv(void);
 void i2c_master_ack(int val);
 void i2c_master_stop(void);
+void I2C_read_multiple(unsigned char init_add, unsigned char init_reg,unsigned char *data,int length);
+void LCD_bar_right(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor);
+void LCD_bar_left(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor);
+void LCD_bar_up(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor);
+void LCD_bar_down(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor);
+
 
 #define  configRead 0b11010111 
 #define  configWrite 0b11010110
@@ -63,6 +69,13 @@ void i2c_master_stop(void);
 #define configG 0b10001000
 #define OUTX_L_XL  0b00101000
 #define OUTX_H_XL 0b00101001
+
+#define centerx 120
+#define centery 160
+#define framelength 200
+#define framewidth 8
+
+
 int main() {
 __builtin_disable_interrupts();
 
@@ -90,27 +103,34 @@ __builtin_disable_interrupts();
     SPI1_init(); // initial SPI
     LCD_init(); //Initial LCD
     LCD_clearScreen(ILI9341_DARKCYAN); //LCD background to black
-    char who;
-    char a=1;
+    unsigned char who;
+    unsigned char a;
+    unsigned char b=0;
+    unsigned char data[13];
+    unsigned char *index=data;
+ 
     int k;
     _CP0_SET_COUNT(0);
     k=0;
+    short at_x;
+    float ac_x;
+    short at_y;
+    float ac_y;
+    short at_z;
+    float ac_z;
+    short temp_temp;
+    float temp;
+    
+    int Lx;
+    int Ly;
+    
+    
     while(1) {
      ////////////////////////////////////////////////////////////////////////////   
       
   
     ////////////////////////////////////////////////////////////////////////////
-       /*
-        i2c_master_start(); 
-       i2c_master_send(configWrite);
-       i2c_master_send(WHO_AM_I);//who am I
-       i2c_master_stop();
-       i2c_master_restart();
-       i2c_master_send(configRead);
-       who=i2c_master_recv();
-       i2c_master_ack(1);
-       i2c_master_stop();
-       */
+   
        i2c_master_start();
        i2c_master_send(configWrite);
        i2c_master_send(CTRL1_XL);
@@ -126,7 +146,7 @@ __builtin_disable_interrupts();
    
        i2c_master_start();
        i2c_master_send(configWrite);
-       i2c_master_send(CTRL1_XL);
+       i2c_master_send(WHO_AM_I);
        i2c_master_stop();
        i2c_master_restart();
        i2c_master_send(configRead);
@@ -134,10 +154,10 @@ __builtin_disable_interrupts();
        i2c_master_ack(1);
        i2c_master_stop();
      
-       
+       /*
        i2c_master_start();
        i2c_master_send(configWrite);
-       i2c_master_send(0b00101000);
+       i2c_master_send(0x28);
        i2c_master_stop();
        i2c_master_restart();
        i2c_master_send(configRead);
@@ -145,39 +165,130 @@ __builtin_disable_interrupts();
        i2c_master_ack(1);
        i2c_master_stop();
        
-       char b;
+       b=0;
        i2c_master_start();
        i2c_master_send(configWrite);
-       i2c_master_send(0b00101001);
+       i2c_master_send(0x29);
        i2c_master_stop();
        i2c_master_restart();
        i2c_master_send(configRead);
        b=i2c_master_recv();
        i2c_master_ack(1);
        i2c_master_stop();
-       short at;
-       float ac;
-       at=b*256+a;
-        ac=4*9.8*at/65536-2*9.8;
-       if  (_CP0_GET_COUNT()>2400000)
-        {
+
+       at=b<<8|a;
+       ac=4*9.8/(65536)*at;
+       */
+       
+        at_x=data[9]<<8|data[8];
+        ac_x=4*9.8/(65536)*at_x;
         
+        at_y=data[11]<<8|data[10];
+        ac_y=4*9.8/(65536)*at_y;
+        
+        at_z=data[13]<<8|data[12];
+        ac_z=4*9.8/(65536)*at_z;
+        
+       temp_temp=data[1]<<8||data[0];
+       temp=temp_temp/65535*135.0-40;
+        
+       if  (_CP0_GET_COUNT()>1200000)
+        {    
         f= 5*24000000.0/_CP0_GET_COUNT();
         sprintf(letter,"who %d",who);   
-        LCD_get(28, 120,letter,ILI9341_WHITE,ILI9341_BLACK);
-        
-          
-       sprintf(letter,"a %d",at);   
-       LCD_get(40, 160,letter,ILI9341_WHITE,ILI9341_BLACK);
-      
-        
-        sprintf(letter,"t %d",k);   
-        LCD_get(28, 200,letter,ILI9341_WHITE,ILI9341_BLACK);
+        LCD_get(10, 10,letter,ILI9341_WHITE,ILI9341_DARKCYAN);      
+        sprintf(letter,"ax %.2f",ac_x);   
+        LCD_get(10, 18,letter,ILI9341_WHITE,ILI9341_DARKCYAN); 
+        sprintf(letter,"ay %.2f",ac_y);   
+        LCD_get(10, 26,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
+        sprintf(letter,"az %.2f",ac_z);   
+        LCD_get(10, 34,letter,ILI9341_WHITE,ILI9341_DARKCYAN); 
+        /*sprintf(letter,"Lx %d",Lx);   
+        LCD_get(10, 42,letter,ILI9341_WHITE,ILI9341_DARKCYAN); 
+        sprintf(letter,"Ly %d",Ly);   
+        LCD_get(10, 50,letter,ILI9341_WHITE,ILI9341_DARKCYAN); 
+        //LCD_get(10, 32,letter,ILI9341_WHITE,ILI9341_BLACK);
         k++;
-        
-           _CP0_SET_COUNT(0);
+        _CP0_SET_COUNT(0);
+     */
+     I2C_read_multiple(0,0x20,index,14);
+    // LCD_bar_right(centerx, centery, framewidth,framewidth,framewidth, ILI9341_BLACK, ILI9341_WHITE); //center    
+    // LCD_bar_right(centerx+framewidth, centery, framelength,framewidth, 10,ILI9341_BLACK, ILI9341_WHITE); //right 
+    // LCD_bar_left(centerx, centery,framelength,framewidth,10,ILI9341_BLACK, ILI9341_WHITE); //left
+     //LCD_bar_up(centerx, centery, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //up
+    // LCD_bar_down(centerx, centery+framewidth, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //down
         }
         
+     
+               
+       
+     
+
+     
+       if (ac_x>0)
+    {
+        if(ac_y>0)
+        {
+            Lx=20*(ac_x);
+            Ly=20*(ac_y);
+             LCD_bar_right(centerx, centery, Lx,framewidth, 10,ILI9341_BLACK, ILI9341_BLACK);
+             LCD_bar_down(centerx, centery+framewidth, Ly,framewidth,10, ILI9341_BLACK, ILI9341_BLACK); //
+             LCD_bar_right(centerx+framewidth+Lx, centery,  framelength,framewidth, 10,ILI9341_BLACK, ILI9341_WHITE);
+             LCD_bar_down(centerx, centery+Ly+framewidth,  framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //upup
+             LCD_bar_left(centerx, centery,framelength,framewidth,10,ILI9341_BLACK, ILI9341_WHITE); 
+             LCD_bar_up(centerx, centery, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); 
+             
+        }
+    }
+     
+       if (ac_x<0)
+    {
+        if(ac_y>0)
+        {
+            Lx=-20*(ac_x);
+            Ly=20*(ac_y);
+             LCD_bar_left(centerx+framewidth, centery, Lx,framewidth, 10,ILI9341_BLACK, ILI9341_BLACK);
+             LCD_bar_down(centerx, centery+framewidth, Ly,framewidth,10, ILI9341_BLACK, ILI9341_BLACK); //
+             LCD_bar_left(centerx-framewidth-Lx, centery,  framelength,framewidth, 10,ILI9341_BLACK, ILI9341_WHITE);
+             LCD_bar_down(centerx, centery+Ly+framewidth,  framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //upup
+             LCD_bar_right(centerx+framewidth, centery,framelength,framewidth,10,ILI9341_BLACK, ILI9341_WHITE); 
+             LCD_bar_up(centerx, centery, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); 
+        }
+    }
+     
+       if (ac_x<0)
+    {
+        if(ac_y<0)
+        {
+            Lx=-20*(ac_x);
+            Ly=-20*(ac_y);
+             LCD_bar_left(centerx+framewidth, centery, Lx,framewidth, 10,ILI9341_BLACK, ILI9341_BLACK);
+             LCD_bar_up(centerx, centery, Ly,framewidth,10, ILI9341_BLACK, ILI9341_BLACK); //
+             LCD_bar_left(centerx-framewidth-Lx, centery,  framelength,framewidth, 10,ILI9341_BLACK, ILI9341_WHITE);
+             LCD_bar_up(centerx, centery-Ly,  framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //upup
+             LCD_bar_right(centerx+framewidth, centery,framelength,framewidth,10,ILI9341_BLACK, ILI9341_WHITE); 
+             LCD_bar_down(centerx, centery+framewidth, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); 
+        }
+    }
+       
+       
+    if (ac_x>0)
+    {
+        if(ac_y<0)
+        {
+            Lx=20*(ac_x);
+            Ly=-20*(ac_y);
+             LCD_bar_right(centerx, centery, Lx,framewidth, 10,ILI9341_BLACK, ILI9341_BLACK);
+             LCD_bar_up(centerx, centery, Ly,framewidth,10, ILI9341_BLACK, ILI9341_BLACK); //
+             LCD_bar_right(centerx+framewidth+Lx, centery,  framelength,framewidth, 10,ILI9341_BLACK, ILI9341_WHITE);
+             LCD_bar_up(centerx, centery-Ly,  framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); //upup
+             LCD_bar_left(centerx, centery,framelength,framewidth,10,ILI9341_BLACK, ILI9341_WHITE); 
+             LCD_bar_down(centerx, centery+framewidth, framelength,framewidth,10, ILI9341_BLACK, ILI9341_WHITE); 
+        }
+    }
+     
+     
+    
         /*            LATAbits.LATA4==0; // initial value assigned zero
                if (PORTBbits.RB4==0)
                {
@@ -194,8 +305,24 @@ __builtin_disable_interrupts();
     } 
 }
 
-
-
+void I2C_read_multiple(unsigned char init_add, unsigned char init_reg,unsigned char *index,int length)
+{
+    int i;
+for (i=init_add;i<length;i++)
+{
+       i2c_master_start();
+       i2c_master_send(configWrite);
+       i2c_master_send(init_reg+i);
+       i2c_master_stop();
+       i2c_master_restart();
+       i2c_master_send(configRead);
+       *index=i2c_master_recv();
+       i2c_master_ack(1);
+       i2c_master_stop();
+       index++;
+   
+}
+}
 
 void LCD_init() {
     int time = 0;
@@ -550,3 +677,42 @@ void i2c_master_stop(void) {          // send a STOP:
   while(I2C2CONbits.PEN) { ; }   
   // wait for STOP to complete
 }
+
+void LCD_bar_right(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor){
+    int i,j,l,m;
+        for(i = 0; i < L;i++){
+             for(j = 0; j< H;j++){
+                LCD_drawPixel(x + i,y + j,framecolor);
+           }
+        }
+
+   
+}
+void LCD_bar_left(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor){
+    int i,j,l,m;
+        for(i = 0; i < L;i++){
+             for(j = 0; j< H;j++){
+                LCD_drawPixel(x - i,y + j,framecolor);
+           }
+        }
+
+   
+}
+void LCD_bar_up(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor){
+    int i,j,l,m;
+        for(j = 0; j < L;j++){
+             for(i = 0; i< H;i++){
+                LCD_drawPixel(x + i,y - j,framecolor);
+           }
+        }
+
+}
+void LCD_bar_down(unsigned short x, unsigned short y, unsigned short L, unsigned short H,unsigned short V, unsigned short barcolor, unsigned short framecolor){
+    int i,j,l,m;
+        for(j = 0; j < L;j++){
+             for(i = 0; i< H;i++){
+               LCD_drawPixel(x + i,y + j,framecolor);
+           }
+        }
+}
+
