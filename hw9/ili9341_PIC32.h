@@ -194,6 +194,8 @@ static const char ASCII[96][5] = {
 #define CS LATBbits.LATB7
 #define DC LATBbits.LATB15
 
+
+
 // functions
 void LCD_init();
 void SPI1_init();
