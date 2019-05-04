@@ -2,6 +2,7 @@
 #include<sys/attribs.h>  // __ISR macro
 #include "ili9341_PIC32.h"
 #include <stdio.h>
+#include <math.h>
 //#include <ili9341.c>
 // DEVCFG0
 #pragma config DEBUG = OFF // no debugging
@@ -60,6 +61,9 @@ void LCD_get(unsigned short x, unsigned short y, char *letter, unsigned letterco
 unsigned char temp;
 unsigned char temp1;
 unsigned char temp2;
+unsigned short xreal;
+unsigned short yreal;
+
 int main() {
 
     __builtin_disable_interrupts();
@@ -81,8 +85,14 @@ int main() {
     _CP0_SET_COUNT(0);
     int recv;
     int I=0;
+    LCD_bar( 160,  0,  80,  80, ILI9341_RED, ILI9341_RED);
+    LCD_bar( 160,  80,  80,  80, ILI9341_GREEN, ILI9341_GREEN);
     
-    
+     sprintf(letter,"+");   
+        LCD_get(200, 40,letter,ILI9341_WHITE,ILI9341_RED);
+        
+           sprintf(letter,"-");   
+        LCD_get(200, 120,letter,ILI9341_WHITE, ILI9341_GREEN);
     while(1) {
         
         
@@ -130,29 +140,46 @@ int main() {
       
         CS2=1;
         
+        xreal=(x-400)/15;
+        
+        yreal=((4000-y)/12.5);
+        
         
         if  (_CP0_GET_COUNT()>2400000)
         {
-  
+      
         sprintf(letter,"z %d    ",((zp-zm)/8)+4096);   
         LCD_get(28, 200,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
-        
-         sprintf(letter,"x %d",x);   
+        sprintf(letter,"xraw %d",x);   
+        LCD_get(28, 210,letter,ILI9341_WHITE,ILI9341_DARKCYAN); 
+        sprintf(letter,"yraw %d",y);   
+        LCD_get(28, 220,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
+         sprintf(letter,"x %d",xreal);   
+        LCD_get(28, 230,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
+         sprintf(letter,"y %d          ",yreal);   
         LCD_get(28, 240,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
-        
-        sprintf(letter,"y %d",y);   
-        LCD_get(28, 280,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
-        
-         sprintf(letter,"I %d",I);   
-        LCD_get(28, 160,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
+        sprintf(letter,"I %d     ",I);   
+        LCD_get(28, 100,letter,ILI9341_WHITE,ILI9341_DARKCYAN);
     
+        
         _CP0_SET_COUNT(0);
            
           if (((zp-zm)/8.00+4096)>1500)
+          {   
+              if (x>2800&&x<4000&&y>3000&&y<3800)
           {
           I++;
           }
-         
+          }
+        
+        
+          if (((zp-zm)/8.00+4096)>1500)
+          {   
+              if (x>2800&&x<4000&&y>2200&&y<3000)
+          {
+          I--;
+          }
+          }
            
            
         }      
