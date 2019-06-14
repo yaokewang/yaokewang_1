@@ -3,10 +3,8 @@
 #include <stdio.h>
 #include "ili9341.h"
 #include "i2c_master.h"
-#include "imu.h"
 #include<xc.h>           // processor SFR definitions
 #include<sys/attribs.h>  // __ISR macro
-#include <math.h>
 #include "ili9341.h"
 #include <stdio.h>
 #include <stdlib.h>

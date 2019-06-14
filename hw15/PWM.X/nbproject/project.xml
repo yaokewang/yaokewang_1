@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>HW7</name>
-            <creation-uuid>d23580b2-4487-4caa-b110-1363a3db947d</creation-uuid>
+            <name>PWM</name>
+            <creation-uuid>2f9610c6-9195-4f8c-ab42-ce5784aa5ff2</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -13,8 +13,7 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>../../HW6/HW6.X</sourceRootElem>
-                <sourceRootElem>../../HW5/HW5.X</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

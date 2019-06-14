@@ -5,103 +5,103 @@ Optional file libmchp_peripheral_32MX250F128B.a not found
 Archive member included because of file (symbol)
 
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (_bootstrap_exception_handler)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (_bootstrap_exception_handler)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (_on_reset)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (_on_reset)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (_on_bootstrap)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (_on_bootstrap)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-nmi-handler.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (_nmi_handler)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (_nmi_handler)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(pic32_data_init.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (__pic32_data_init)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (__pic32_data_init)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(general-exception.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o (_general_exception_context)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o (_general_exception_context)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector0.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_0)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_0)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector1.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_1)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_1)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector2.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_2)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_2)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector3.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_3)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_3)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector4.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_4)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_4)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector5.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_5)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_5)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector6.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_6)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_6)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector7.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_7)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_7)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector8.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_8)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_8)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector9.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_9)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_9)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector10.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_10)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_10)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector11.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_11)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_11)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector13.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_13)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_13)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector14.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_14)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_14)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector15.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_15)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_15)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector16.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_16)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_16)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector17.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_17)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_17)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector18.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_18)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_18)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector19.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_19)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_19)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector20.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_20)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_20)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector21.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_21)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_21)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector22.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_22)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_22)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector23.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_23)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_23)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector24.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_24)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_24)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector25.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_25)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_25)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector26.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_26)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_26)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector27.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_27)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_27)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector28.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_28)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_28)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector29.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_29)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_29)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector30.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_30)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_30)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector31.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_31)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_31)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector32.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_32)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_32)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector33.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_33)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_33)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector34.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_34)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_34)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector35.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_35)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_35)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector36.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_36)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_36)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector37.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_37)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_37)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector38.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_38)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_38)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector39.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_39)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_39)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector40.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_40)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_40)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector41.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_41)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_41)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector42.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_42)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_42)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(vector43.o)
-                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o (__vector_dispatch_43)
+                              C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o (__vector_dispatch_43)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
                               c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(general-exception.o) (_general_exception_handler)
 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
@@ -116,12 +116,12 @@ c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/
 Allocating common symbols
 Common symbol       size              file
 
-blue                0xf0              build/default/production/main.o
-green               0xf0              build/default/production/main.o
-red                 0xf0              build/default/production/main.o
-FPS                 0x4               build/default/production/main.o
-c                   0x4               build/default/production/main.o
-fps                 0x64              build/default/production/main.o
+blue                0xf0              build/default/production/pwm.o
+green               0xf0              build/default/production/pwm.o
+red                 0xf0              build/default/production/pwm.o
+FPS                 0x4               build/default/production/pwm.o
+c                   0x4               build/default/production/pwm.o
+fps                 0x64              build/default/production/pwm.o
 
 Microchip PIC32 Memory-Usage Report
 
@@ -235,13 +235,13 @@ stack                   0xa0000370         0x7c80       31872  Reserved for stac
 
 Discarded input sections
 
- .reginfo       0x00000000       0x18 build/default/production/main.o
- .reginfo       0x00000000       0x18 build/default/production/ili9341.o
+ .reginfo       0x00000000       0x18 build/default/production/pwm.o
  .reginfo       0x00000000       0x18 build/default/production/i2c_master.o
- .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
- .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccqeVEPw.o
- .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
- .discard       0x00000000       0xb0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
+ .reginfo       0x00000000       0x18 build/default/production/ili9341.o
+ .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
+ .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccCZlNsu.o
+ .reginfo       0x00000000       0x18 C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
+ .discard       0x00000000       0xb0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX250F128B\default_isr_vectors.o
  .discard       0x00000000       0xb0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX250F128B\default_isr_vectors.o
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\pic32_software_reset.o
@@ -321,13 +321,13 @@ configsfrs       0xbfc00bf0         0x00000010
 Linker script and memory map
 
 LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\debug-exception-return.o
-LOAD build/default/production/main.o
-LOAD build/default/production/ili9341.o
+LOAD build/default/production/pwm.o
 LOAD build/default/production/i2c_master.o
+LOAD build/default/production/ili9341.o
                 0x00000001                __MPLAB_BUILD = 0x1
-LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
-LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccqeVEPw.o
-LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
+LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
+LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccCZlNsu.o
+LOAD C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
 LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX250F128B\default_isr_vectors.o
 LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\pic32_software_reset.o
                 0x00000400                PROVIDE (_min_stack_size, 0x400)
@@ -353,40 +353,40 @@ END GROUP
                 0xbfc00bf0        0x4
  *(.config_BFC00BF0)
  .config_BFC00BF0
-                0xbfc00bf0        0x4 build/default/production/main.o
+                0xbfc00bf0        0x4 build/default/production/pwm.o
 
 .config_BFC00BF4
                 0xbfc00bf4        0x4
  *(.config_BFC00BF4)
  .config_BFC00BF4
-                0xbfc00bf4        0x4 build/default/production/main.o
+                0xbfc00bf4        0x4 build/default/production/pwm.o
 
 .config_BFC00BF8
                 0xbfc00bf8        0x4
  *(.config_BFC00BF8)
  .config_BFC00BF8
-                0xbfc00bf8        0x4 build/default/production/main.o
+                0xbfc00bf8        0x4 build/default/production/pwm.o
 
 .config_BFC00BFC
                 0xbfc00bfc        0x4
  *(.config_BFC00BFC)
  .config_BFC00BFC
-                0xbfc00bfc        0x4 build/default/production/main.o
+                0xbfc00bfc        0x4 build/default/production/pwm.o
                 0xbfc02000                PROVIDE (_DBG_CODE_ADDR, 0xbfc02000)
                 0x00000ff0                PROVIDE (_DBG_CODE_SIZE, 0xff0)
 
 .reset          0xbfc00000      0x184
  *(.reset)
- .reset         0xbfc00000        0x8 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .reset         0xbfc00000        0x8 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
                 0xbfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0xbfc00008      0x17c C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+                0xbfc00008      0x17c C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
                 0xbfc00008                _startup
 
 .bev_excpt      0xbfc00380       0x10
  *(.bev_handler)
- .bev_handler   0xbfc00380       0x10 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .bev_handler   0xbfc00380       0x10 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
 
 .dbg_excpt      0xbfc00480        0x0
                 0xbfc00480                . = (. + DEFINED (_DEBUGGER)?0x8:0x0)
@@ -396,7 +396,7 @@ END GROUP
 
 .app_excpt      0x9d01f180       0x10
  *(.gen_handler)
- .gen_handler   0x9d01f180       0x10 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .gen_handler   0x9d01f180       0x10 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
 
 .vector_0       0x9d01f200        0x8
  *(.vector_0)
@@ -472,7 +472,7 @@ END GROUP
 
 .vector_12      0x9d01f380        0x8
  *(.vector_12)
- .vector_12     0x9d01f380        0x8 build/default/production/main.o
+ .vector_12     0x9d01f380        0x8 build/default/production/pwm.o
                 0x9d01f380                __vector_dispatch_12
                 0x00000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_12) <= (_vector_spacing << 0x5))), function at exception vector 12 too large)
 
@@ -863,7 +863,7 @@ END GROUP
 .sdata          0xa0000000        0x4
                 0xa0000000                _sdata_begin = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0xa0000000        0x4 build/default/production/main.o
+ .sdata         0xa0000000        0x4 build/default/production/pwm.o
                 0xa0000004                . = ALIGN (0x4)
                 0xa0000004                _sdata_end = .
 
@@ -880,9 +880,9 @@ END GROUP
                 0xa0000004                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0xa0000004        0x4 build/default/production/main.o
+ .sbss          0xa0000004        0x4 build/default/production/pwm.o
  *(.scommon)
- .scommon       0xa0000008        0x8 build/default/production/main.o
+ .scommon       0xa0000008        0x8 build/default/production/pwm.o
                 0xa0000008                FPS
                 0xa000000c                c
  .scommon       0xa0000010        0x0 build/default/production/ili9341.o
@@ -892,7 +892,7 @@ END GROUP
 .bss            0xa0000010      0x334
  *(.dynbss)
  *(COMMON)
- COMMON         0xa0000010      0x334 build/default/production/main.o
+ COMMON         0xa0000010      0x334 build/default/production/pwm.o
                 0xa0000010                blue
                 0xa0000100                green
                 0xa00001f0                red
@@ -923,9 +923,9 @@ END GROUP
 
 .mdebug.abi32   0xa0000344        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0xa0000344        0x0 build/default/production/main.o
- .mdebug.abi32  0xa0000344        0x0 build/default/production/ili9341.o
+ .mdebug.abi32  0xa0000344        0x0 build/default/production/pwm.o
  .mdebug.abi32  0xa0000344        0x0 build/default/production/i2c_master.o
+ .mdebug.abi32  0xa0000344        0x0 build/default/production/ili9341.o
  .mdebug.abi32  0xa0000344        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .mdebug.abi32  0xa0000344        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .mdebug.abi32  0xa0000344        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -973,10 +973,10 @@ END GROUP
 
 .comment        0x00000000       0x3c
  *(.comment)
- .comment       0x00000000       0x3c build/default/production/main.o
+ .comment       0x00000000       0x3c build/default/production/pwm.o
                                  0x3d (size before relaxing)
- .comment       0x00000000       0x3d build/default/production/ili9341.o
  .comment       0x00000000       0x3d build/default/production/i2c_master.o
+ .comment       0x00000000       0x3d build/default/production/ili9341.o
  .comment       0x00000000       0x3d c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .comment       0x00000000       0x3d c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .comment       0x00000000       0x3d c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -998,11 +998,11 @@ END GROUP
 .debug_aranges  0x00000000      0x100
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 build/default/production/main.o
+                0x00000000       0x20 build/default/production/pwm.o
  .debug_aranges
-                0x00000020       0x20 build/default/production/ili9341.o
+                0x00000020       0x20 build/default/production/i2c_master.o
  .debug_aranges
-                0x00000040       0x20 build/default/production/i2c_master.o
+                0x00000040       0x20 build/default/production/ili9341.o
  .debug_aranges
                 0x00000060       0x20 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_aranges
@@ -1017,44 +1017,44 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2ccb
+.debug_info     0x00000000     0x2cc7
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x12be build/default/production/main.o
- .debug_info    0x000012be      0xf9c build/default/production/ili9341.o
- .debug_info    0x0000225a      0x5eb build/default/production/i2c_master.o
- .debug_info    0x00002845       0xf9 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0000293e       0xd2 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_info    0x00002a10       0xda c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_info    0x00002aea       0xf5 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
- .debug_info    0x00002bdf       0xec c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_info    0x00000000     0x12bc build/default/production/pwm.o
+ .debug_info    0x000012bc      0x5ea build/default/production/i2c_master.o
+ .debug_info    0x000018a6      0xf9b build/default/production/ili9341.o
+ .debug_info    0x00002841       0xf9 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x0000293a       0xd2 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_info    0x00002a0c       0xda c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x00002ae6       0xf5 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .debug_info    0x00002bdb       0xec c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .debug_abbrev   0x00000000      0x475
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x108 build/default/production/main.o
- .debug_abbrev  0x00000108      0x1af build/default/production/ili9341.o
- .debug_abbrev  0x000002b7       0xf6 build/default/production/i2c_master.o
+ .debug_abbrev  0x00000000      0x108 build/default/production/pwm.o
+ .debug_abbrev  0x00000108       0xf6 build/default/production/i2c_master.o
+ .debug_abbrev  0x000001fe      0x1af build/default/production/ili9341.o
  .debug_abbrev  0x000003ad       0x28 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_abbrev  0x000003d5       0x28 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_abbrev  0x000003fd       0x28 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
  .debug_abbrev  0x00000425       0x28 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
  .debug_abbrev  0x0000044d       0x28 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x00000000      0x8ed
+.debug_line     0x00000000      0x8e9
  *(.debug_line)
- .debug_line    0x00000000      0x161 build/default/production/main.o
- .debug_line    0x00000161      0x317 build/default/production/ili9341.o
- .debug_line    0x00000478      0x143 build/default/production/i2c_master.o
- .debug_line    0x000005bb       0xab c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x00000666       0x98 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_line    0x000006fe       0x9c c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x0000079a       0xa9 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
- .debug_line    0x00000843       0xaa c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_line    0x00000000      0x15f build/default/production/pwm.o
+ .debug_line    0x0000015f      0x142 build/default/production/i2c_master.o
+ .debug_line    0x000002a1      0x316 build/default/production/ili9341.o
+ .debug_line    0x000005b7       0xab c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00000662       0x98 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_line    0x000006fa       0x9c c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x00000796       0xa9 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .debug_line    0x0000083f       0xaa c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .debug_frame    0x00000000      0x414
  *(.debug_frame)
- .debug_frame   0x00000000       0x58 build/default/production/main.o
- .debug_frame   0x00000058      0x22c build/default/production/ili9341.o
- .debug_frame   0x00000284       0xd8 build/default/production/i2c_master.o
+ .debug_frame   0x00000000       0x58 build/default/production/pwm.o
+ .debug_frame   0x00000058       0xd8 build/default/production/i2c_master.o
+ .debug_frame   0x00000130      0x22c build/default/production/ili9341.o
  .debug_frame   0x0000035c       0x2c c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_frame   0x00000388       0x20 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_frame   0x000003a8       0x20 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1063,9 +1063,9 @@ END GROUP
 
 .debug_str      0x00000000       0x1c
  *(.debug_str)
- .debug_str     0x00000000        0x0 build/default/production/main.o
+ .debug_str     0x00000000        0x0 build/default/production/pwm.o
+ .debug_str     0x00000000        0x0 build/default/production/i2c_master.o
  .debug_str     0x00000000       0x1c build/default/production/ili9341.o
- .debug_str     0x0000001c        0x0 build/default/production/i2c_master.o
  .debug_str     0x0000001c        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .debug_str     0x0000001c        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
  .debug_str     0x0000001c        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
@@ -1107,11 +1107,11 @@ END GROUP
                 0x00000000       0x10
  *(.gnu.attributes)
  .gnu.attributes
-                0x00000000       0x10 build/default/production/main.o
+                0x00000000       0x10 build/default/production/pwm.o
  .gnu.attributes
-                0x00000010       0x10 build/default/production/ili9341.o
+                0x00000010       0x10 build/default/production/i2c_master.o
  .gnu.attributes
-                0x00000020       0x10 build/default/production/i2c_master.o
+                0x00000020       0x10 build/default/production/ili9341.o
  .gnu.attributes
                 0x00000030       0x10 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
  .gnu.attributes
@@ -1135,7 +1135,7 @@ LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4
 LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libpic32.a
 END GROUP
 LOAD c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3\libgcc.a
-OUTPUT(dist/default/production/HW15.X.production.elf elf32-tradlittlemips)
+OUTPUT(dist/default/production/PWM.X.production.elf elf32-tradlittlemips)
 LOAD stack
 LOAD data_init
 
@@ -1488,40 +1488,40 @@ LOAD data_init
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX250F128B\default_isr_vectors.o
 
 .bss%z115       0x00000000        0x0
- .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
+ .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
 
 .data%z116      0x00000000        0x0
- .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
+ .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
 
 .bss%z117       0x00000000        0x0
- .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccqeVEPw.o
+ .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccCZlNsu.o
 
 .data%z118      0x00000000        0x0
- .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccqeVEPw.o
+ .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccCZlNsu.o
 
 .bss%z119       0x00000000        0x0
- .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .bss           0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
 
 .data%z120      0x00000000        0x0
- .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .data          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
 
 .bss%z121       0x00000000        0x0
- .bss           0x00000000        0x0 build/default/production/i2c_master.o
-
-.data%z122      0x00000000        0x0
- .data          0x00000000        0x0 build/default/production/i2c_master.o
-
-.bss%z123       0x00000000        0x0
  .bss           0x00000000        0x0 build/default/production/ili9341.o
 
-.data%z124      0x00000000        0x0
+.data%z122      0x00000000        0x0
  .data          0x00000000        0x0 build/default/production/ili9341.o
 
+.bss%z123       0x00000000        0x0
+ .bss           0x00000000        0x0 build/default/production/i2c_master.o
+
+.data%z124      0x00000000        0x0
+ .data          0x00000000        0x0 build/default/production/i2c_master.o
+
 .bss%z125       0x00000000        0x0
- .bss           0x00000000        0x0 build/default/production/main.o
+ .bss           0x00000000        0x0 build/default/production/pwm.o
 
 .data%z126      0x00000000        0x0
- .data          0x00000000        0x0 build/default/production/main.o
+ .data          0x00000000        0x0 build/default/production/pwm.o
 
 .bss%z127       0x00000000        0x0
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\debug-exception-return.o
@@ -1554,7 +1554,7 @@ LOAD data_init
                 0x9d00153c                LCD_ybar
                 0x9d001858                LCD_plot
                 0x9d001948                LCD_axis
- .text          0x9d001a84      0x3e0 build/default/production/main.o
+ .text          0x9d001a84      0x3e0 build/default/production/pwm.o
                 0x9d001a84                main
                 0x9d001d1c                Timer3ISR
 
@@ -1570,7 +1570,7 @@ LOAD data_init
 
 .rodata         0x9d0020a4      0x3c4
  .rodata        0x9d0020a4      0x1e4 build/default/production/ili9341.o
- .rodata        0x9d002288      0x1e0 build/default/production/main.o
+ .rodata        0x9d002288      0x1e0 build/default/production/pwm.o
 
 .text.fp32mul   0x9d002468      0x1bc
  .text.fp32mul  0x9d002468      0x1bc c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\libm.a(fp32mul.o)
@@ -1606,7 +1606,7 @@ LOAD data_init
 .text.main_entry
                 0x9d0028a0       0x54
  .text.main_entry
-                0x9d0028a0       0x54 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+                0x9d0028a0       0x54 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
                 0x9d0028d4                __crt0_exit
 
 .text._bootstrap_exception_handler
@@ -1813,13 +1813,13 @@ LOAD data_init
  .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX250F128B\default_isr_vectors.o
 
 .text%z183      0x00000000        0x0
- .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccQQkdyL.o
+ .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccy64eSw.o
 
 .text%z184      0x00000000        0x0
- .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccqeVEPw.o
+ .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccCZlNsu.o
 
 .text%z185      0x00000000        0x0
- .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccuXAdgv.o
+ .text          0x00000000        0x0 C:\Users\NEOLIT~1\AppData\Local\Temp\ccrEZWxD.o
 
 .text%z186      0x00000000        0x0
  .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v2.15/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib\debug-exception-return.o
